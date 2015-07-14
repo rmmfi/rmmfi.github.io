@@ -100,6 +100,7 @@ textarea {
 
 body {
     background-color: #334F60;
+    font-size: 22px;
 }
 
 .logo {
@@ -118,7 +119,8 @@ label {
     display: inline-block;
     color: white;
     padding-right: 20px;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    max-width: 95%;
 }
 
 input {
@@ -128,12 +130,27 @@ input {
     margin: 5px;
 }
 
+label {
+    min-width: 8rem;
+}
+
+label.ext {
+    min-width: 2rem;
+}
+
 html input[disabled] {
     cursor: not-allowed;
+    background-color: grey;
 }
 
 input[type="submit"] {
     padding: 10px 20px;
+}
+
+/* assuming everyone is in US */
+#teravisiontech_codes_phone_input,
+#teravisiontech_codes_phone {
+    display: none;
 }
 
 
@@ -225,8 +242,11 @@ input[type="submit"] {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 22em) {
     /* Style adjustments for viewports that meet the condition */
+    #form {
+        padding: 10px 5px 5px;
+    }
 }
 
 @media print,
